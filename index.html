@@ -1,0 +1,321 @@
+
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Tours and Travels</title>
+    <script type="text/javascript" src="dmxAppConnect/dmxAppConnect.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
+    <script type="text/javascript" src="dmxAppConnect/dmxSwiper/dmxSwiper.js"></script>
+    <script type="text/javascript" src="dmxAppConnect/dmxSwiper/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dmxAppConnect/dmxSwiper/themes/white.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1 {
+          font-family: Comic Sans MS;
+            font-size: 3.9rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-shadow: 0 0.5rem 0.9rem rgba(0,0,0,0.8); 
+            color: #0000cc;
+        }
+        p.lead {
+          padding: 12px 75px;
+            text-shadow: 0 0.2rem 0.5rem rgba(0,0,0,1);
+            font-size: 1rem;
+            text-align: center;
+            text-decoration-color: currentColor;
+            text-decoration-style: wavy;
+            color: #0000cc
+        }
+        .swiper-pagination-bullet {
+            width: 16px;
+            height: 16px;
+            margin: 12px 0 !important;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    .navbar-light .navbar-brand {
+    color: rgb(255 255 255);
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+   color: rgb(255 255 255 / 90%);
+   padding: 1px 15px;
+}
+.bg-light {
+    background-color: #06060600!important;
+}
+.navbar-light .navbar-nav .nav-link {
+       color: rgb(255 255 255 / 90%);
+       padding: 1px 15px;
+}
+.navbar-light .navbar-nav .nav-link.disabled {
+        color: rgb(255 255 255 / 90%);
+        padding: 1px 15px;
+}
+.navbar-nav {
+padding-left: 20%;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: rgb(255 0 0 / 90%);
+        transition: 0.6s ease;
+        background-image: -webkit-gradient( linear, left top, right top,color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+.footer_class
+{
+height:80px;
+border:1px solid red;
+position:fixed; 
+z-index:99;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+   
+}
+
+.navbar-nav {
+    padding-left: 21.8%;
+}
+.logo img{
+  backface-visibility: hidden;
+  float:left;
+  height: 120px;
+  width: 100px;
+}
+p.lead text-white{
+  color: #0000cc;
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+</style>
+    </head>
+
+    <body id="index" is="dmx-app">
+
+<!-- Creates the bootstrap modal where the image will appear -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+       
+      </div>
+      <div class="modal-body">
+       <img src="" class="imagepreview" style="width: 100%" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <div style="position:fixed;width:150%;height: 50px;z-index: 99;">
+    <!--<h5  class="text-white">Home</h5> -->
+    
+  
+   
+   <div class="logo">
+  <img src="img/mtvlogo1.png">
+</div>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about_us.html">About Us</a>
+      </li>
+    <!--  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link disabled" href="trial.php">Registration</a>
+      </li>
+      <li class="nav-item1">
+        <a style="left:50%;color: white;margin-left: 480%;"class="nav-link disabled1" href="login.php">Login</a>
+      </li>
+    </ul>
+    <!--<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+   </div> 
+<div id="swiper1" is="dmx-swiper" vertical="true" pagination="bullets" mousewheel="true" parallax="true" speed="800">
+
+<div id="swiper1" is="dmx-swiper" vertical="true" pagination="bullets" mousewheel="true" parallax="true" speed="800">
+    <div class="swiper-slide " style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/agra.jpg')">
+      <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+            <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Taj Mahal</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">Taj Mahal is built by 20000 artisans in a span of 22 years. Taj Mahal is one of the famous historical monuments in India.The most spectacular feature is the marble dome that surmounts the tomb. The dome is nearly 35 metres.
+            It's a white marble mausoleum built by Mughal Emperor, Shah Jahan in the year 1653. Taj Mahal is built in the loving memory of Mumtaz Mahal, wife of Emperor Shah Jahan.</p>
+                <a href="#" id="pop" class="lead text-black pop" style="color: teal" data-swiper-parallax="-500" data-swiper-parallax-duration="1200"> <img id="imageresource" src="images/Iti1.png" style="width: 400px; height: 264px;display:none;" /> Click for This trip's Itinerary</a>
+        
+        
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="swiper-slide" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/rajasthan.jpg')">
+    <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+        <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Rajasthan</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">A City of Lakes, picturesque locales and a hub of museums, galleries and natural spots - there is something for everyone in this city touted as the world’s 7th best!
+            Jal Mahal is a palace in the middle of the Man Sagar Lake in Jaipur city, the capital of the state of Rajasthan, India. The palace and the lake around it were renovated and enlarged in the 18th century by Maharaja Jai Singh II of Amber.</p>
+      
+      
+       <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">
+      <a href="#" id="pop" class="lead text-black pop" style="color: teal" data-swiper-parallax="-500" data-swiper-parallax-duration="1200"> <img id="imageresource" src="images/Rajasthan.png" style="width: 400px; height: 264px;display:none;" /> Click for This trip's Itinerary</a>
+    </p>
+    
+    
+  </div>
+        </div>
+  </div>
+      <div class="swiper-slide" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/leh5.jpg')">
+      <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+        <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Leh-Ladakh</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">SSet amidst the epic Himalayas, Ladakh is a rustic and heavenly beautiful travel destination. The rugged valleys and mountains, winding roads coupled with the vibrant cultural life maintain the exuberance and charm of this region. The iconic Magnetic Hill, the turquoise coloured Pangong Lake, the confluence of two mystical rivers, ancient and awe inspiring monasteries and the highest passes are a few of the marvelous attractions of Leh and Ladakh in general. The wide array of trekking routes will satiate your soul and enrich the senses.</p>
+      
+      <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">
+      <a href="#" id="pop" class="lead text-black pop" style="color: teal" data-swiper-parallax="-500" data-swiper-parallax-duration="1200"> <img id="imageresource" src="images/iti9.png" style="width: 400px; height: 264px;display:none;" /> Click for This trip's Itinerary</a>
+    </p>
+      
+      </div>
+        </div>
+  </div>
+      <div class="swiper-slide" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/maha1.png')">
+    <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+        <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Maharashtra</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">Maharashtra is a state in the western peninsular region of India occupying a substantial portion of the Deccan Plateau.The Gateway of India is an arch-monument built in the early twentieth century in the city of Mumbai, in the Indian state of Maharashtra. It was erected to commemorate the landing in December 1911 at Apollo Bunder.Ellora is a UNESCO World Heritage Site located in the Aurangabad district of Maharashtra,</p>
+      
+      <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">
+      <a href="#" id="pop" class="lead text-black pop" style="color: teal" data-swiper-parallax="-500" data-swiper-parallax-duration="1200"> <img id="imageresource" src="images/Iti4.png" style="width: 400px; height: 264px;display:none;" /> Click for This trip's Itinerary</a>
+    </p>
+      
+      </div>
+        </div>
+  </div>
+      <div class="swiper-slide" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/gujarat.jpg')">
+    <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+        <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Gujarat</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">Gujarat is a state on the western coast of India with a coastline of 1,600 km – most of which lies on the Kathiawar peninsula.The Statue of Unity is a colossal statue of Indian statesman and independence activist Vallabhbhai Patel, who was the first Deputy Prime Minister and Home minister of independent India.Dumas Beach is an urban beach along the Arabian Sea, located 21 kilometres southwest of the City of Surat</p>
+      
+      <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">
+      <a href="#" id="pop" class="lead text-black pop" data-swiper-parallax="-500" style="color: teal" data-swiper-parallax-duration="1200"> <img id="imageresource" src="images/Gujarat.png" style="width: 400px; height: 264px;display:none;" /> Click for This trip's Itinerary</a>
+    </p>
+      
+      </div>
+        </div>
+  </div>
+      <div class="swiper-slide" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/valley.jpg')">
+    <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-center">
+        <h1  data-swiper-parallax="-400"  data-swiper-parallax-duration="1000" class="text-white" style="background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear; ">Valley Of Flowers</h1>
+            <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">Triveni Ghat is a ghat situated in Rishikesh, Uttarakhand. It is the biggest and most famous ghat in Rishikesh at the banks of Ganges. VThe main daily event of the attraction is the evening Aarti of Goddess Ganga also commonly called as "Maha Aarti".alley of Flowers National Park is an Indian national park, located in North Chamoli and Pithoragarh, in the state of Uttarakhand and is known for its meadows of endemic alpine flowers and the variety of flora</p>
+      
+      
+      <p class="lead text-white" data-swiper-parallax="-500" data-swiper-parallax-duration="1200">
+      <a href="#" id="pop" class="lead text-black pop" data-swiper-parallax="-500" data-swiper-parallax-duration="1200" style="color: teal"> <img id="imageresource" src="images/valley.png" style="width: 400px; height: 264px;display:none; " /> Click for This trip's Itinerary</a>
+    </p>
+      </div>
+        </div>
+  </div>
+  
+  
+    </div>
+   <div style="position:fixed;width:100%;height: 40px;z-index: 99; left: 1;  bottom: 0;  ">
+    <p class="" href="#" style="color:black;text-align:center"> © 2020  All Rights Reserved.
+</p>
+   </div>
+
+<script>
+$(document).ready(function() {
+$('.pop').click(function(){
+  $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+      $('#imagemodal').modal('show');
+});
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script> 
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+</body>
+</html>
